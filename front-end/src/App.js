@@ -37,6 +37,11 @@ function App() {
   const toggleMenu = () => {
     setIsMenuOpened((prev) => !prev);
   };
+
+  const closeMenu = () => {
+    setIsMenuOpened(false);
+  };
+
   return (
     <>
   
