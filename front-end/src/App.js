@@ -1,0 +1,249 @@
+import React, { useEffect, useState } from 'react';
+
+
+
+   
+function App() {  
+
+  const [isMenuOpened, setIsMenuOpened] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpened((prev) => !prev);
+  };
+  return (
+
+  
+
+    <>
+  
+  <section id="home" class="container">
+    <div class="logo">
+        <img src="assets/img/logo.png" alt="Logo" />
+        <span>Usman Akram<strong>.</strong></span>
+    </div> 
+  <div class="navbar">
+      
+        <button id="menu-button">MENU</button>
+    </div>
+    <div class="blur-background">
+    <div className="navbar">
+        <button id="menu-button" onClick={toggleMenu}>
+          {isMenuOpened ? 'CLOSE' : 'MENU'}
+        </button>
+      </div>
+      <div className={`blur-background ${isMenuOpened ? 'flex' : 'none'}`}>
+        <nav className="nav-menu">
+          <div className="ico">
+            <span className="horizon"></span>
+            <a href="https://instagram.com/sh.a9i" target="/">
+              <i className="fa fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/FlyynR" target="/">
+              <i className="fa fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/usmanakram9" target="/">
+              <i className="fa fa-linkedin"></i>
+            </a>
+          </div>
+          <ul className="nav-menu-item">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+          </ul>
+          <ul className="nav-menu-item2">
+            <li>
+              <a href="#service">Services</a>
+            </li>
+            <li>
+              <a href="#subscribe">Subscribe</a>
+            </li>
+            <li>
+              <a href="#contactus">Contact</a>
+            </li>
+          </ul>
+          <div className="copy">
+            <p>&copy; Copyright- Usman Akram</p>
+          </div>
+        </nav>
+
+        <div className="vertical-line"></div>
+      </div>
+</div>
+  
+</section>
+<section id="banner" class="banner">
+    <div class="left">
+        <a href="https://instagram.com/sh.a9i" target="/"><i class="fa fa-instagram"></i></a> 
+
+        <a href="https://www.linkedin.com/in/usmanakram9"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/FlyynR" target="/"><i class="fa fa-facebook"></i></a>
+        <div class="left-line"></div>
+    </div>
+   <div class="head">
+    <h1>
+        <span class="light"></span>
+        <span class="normal"></span>
+      </h1>
+      
+
+      <p>Learn More</p>
+      <div class="arr">
+      <div class="down-line line1"></div><div class="down-line line2"></div>
+    </div>
+      
+    </div>
+    <div class="scrol">
+        <p class="vert">SCROLL</p>
+    <div class="lf"></div>
+</div>
+    <div class="right">
+       
+        <ul class="dots-navigation">
+            <li class="dot active"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+            <li class="dot"></li>
+          
+        </ul>
+    </div>
+   
+</section>
+
+<section id="about" class="about">
+    <div class="pic">
+        
+       <img src="./assets/img/usm.jpeg" alt="" />
+    </div>
+    <div class="des">
+        <p class="one">Possessing an in-depth knowledge of administration and Information Technology processes and
+            procedures and a proven track record of providing support.</p>
+        <p class="two">Easy going by nature and able to get along with
+            both work colleagues and seniors when providing comprehensive administrative support to day-to-day
+            operations of human resources department.</p>
+        <p class="three">Have in-depth knowledge of languages and development
+            tools. I am passionate about programming and application development.</p>
+            <p class="four">Organized, punctual and multiskilled dedicated worker who is very keen to take new responsibilities with bigger opportunities and high
+                challenges.
+                </p>
+    </div>
+    <div class="abscrol">
+        <p class="abvert">ABOUT ME</p>
+    <div class="ablf"></div>
+</div>
+</section>
+
+<section id="service" class="service">
+    <div class="servicet">
+<div class="serh">
+    <h1>Our Services</h1>
+</div>
+    <div class="serd"><h1>We are the team of highly professionals. below are the services we provide</h1>
+    </div>    
+
+    <div class="vertline"></div>
+    <div class="cont">
+        <div class="item1">
+            <div class="iconn"> <i class="fa fa-html5"></i></div>
+            <div class="serdesc"><p>Harness the potential of the web with our HTML expertise, building the foundation for seamless and dynamic online experiences.</p></div>
+            
+           
+           
+        </div>
+        <div class="item2">
+            <div class="iconn"><i class="fa fa-css3"></i></div> 
+            <div class="serdesc"><p>Elevate your website's design and functionality with our CSS expertise, creating visually stunning and responsive web experiences.</p></div> 
+        </div>
+        <div class="item3">
+            <div class="iconn"><i class="fa fa-database"></i></div>
+            <div class="serdesc"><p>Unlock the power of data with our database solutions, tailored to optimize your information management and retrieval needs.</p></div>
+            
+        </div>
+    </div>
+    </div>
+   
+    
+  
+    <div class="service-abscrol">
+        <p class="service-abvert">SERVICES</p>
+        <div class="service-ablf"></div>
+    </div>
+    
+    
+</section>
+
+
+<section id="subscribe" class="subscribe">
+    <div class="subscribet">
+<div class="subit1"><h1>Call to action.</h1></div>
+<div class="subit2"><p>Don't miss any news via email ! Register email if you agree :</p>
+<h4>EMAIL ADDRESS*</h4>
+<input type="text" placeholder="your@email.address" />
+<input type="submit" value="SUBSCRIBE" />
+</div>
+
+    </div>
+   
+    
+    <div class="subscribe-abscrol">
+
+
+        <p class="subscribe-abvert">SUBSCRIBE</p>
+        <div class="subscribe-ablf"></div>
+    </div>
+
+</section>
+
+
+
+
+<section id="contactus" class="contactus">
+    <div class="contactust">
+        <div class="contactit1">
+            <h1>Let's Talk!.</h1>
+        <p>INFORMATION</p>
+        <p class="mes">MESSAGE</p>
+    </div>
+        <div class="contactit2">
+            <p>Want to start an awesome projects or have questions about our company and products found on our website? Feel free to talk to us, we will happy to answer you. Here is how to reach us:</p>
+           <div class="box">
+            <div class="it1">
+               <div class="hl"></div>
+               <p>Contact</p>
+               <p>Call: 0311-0699799</p>
+               <p>Email: M.usman9@hotmail.com</p>
+               <div class="socio">
+               <a href="https://instagram.com/sh.a9i" target="/"> <i class="fa fa-instagram" ></i></a>
+               <a href="https://www.facebook.com/FlyynR" target="/"> <i class="fa fa-facebook" ></i></a>
+               <a href="https://t.snapchat.com/dZz5WrIQ" target="/"><i class="fa fa-snapchat" ></i></a>
+               <a href="https://www.linkedin.com/in/usmanakram9" target="/"><i class="fa fa-linkedin" ></i></a>
+               </div>
+               
+            </div>
+            <div class="it2">
+               <div class="hl2">
+              
+               </div>
+               <p>Address</p>
+               <p>Human Resource Department</p>
+               <p>Admin Block,IIUI</p>
+          
+             <a href="/">  <i class="fa fa-phone"> </i> </a>
+            </div>
+           </div>
+        </div>
+    </div>
+    <div class="contactus-abscrol">
+        <p class="contactus-abvert">CONTACT US</p>
+        <div class="contactus-ablf"></div>
+    </div>
+</section>
+    </>
+  );
+}
+
+export default App;
