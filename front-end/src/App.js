@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from 'react';
 
-
-
-   
+import React, { useState } from 'react';
+ 
 function App() {  
-
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpened((prev) => !prev);
   };
   return (
-
-  
-
     <>
   
   <section id="home" class="container">
@@ -23,55 +17,42 @@ function App() {
     </div> 
   <div class="navbar">
       
-        <button id="menu-button">MENU</button>
-    </div>
-    <div class="blur-background">
-    <div className="navbar">
         <button id="menu-button" onClick={toggleMenu}>
-          {isMenuOpened ? 'CLOSE' : 'MENU'}
+        {isMenuOpened ? 'CLOSE' : 'MENU'}
         </button>
-      </div>
-      <div className={`blur-background ${isMenuOpened ? 'flex' : 'none'}`}>
-        <nav className="nav-menu">
-          <div className="ico">
-            <span className="horizon"></span>
-            <a href="https://instagram.com/sh.a9i" target="/">
-              <i className="fa fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/FlyynR" target="/">
-              <i className="fa fa-facebook"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/usmanakram9" target="/">
-              <i className="fa fa-linkedin"></i>
-            </a>
-          </div>
-          <ul className="nav-menu-item">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-          </ul>
-          <ul className="nav-menu-item2">
-            <li>
-              <a href="#service">Services</a>
-            </li>
-            <li>
-              <a href="#subscribe">Subscribe</a>
-            </li>
-            <li>
-              <a href="#contactus">Contact</a>
-            </li>
-          </ul>
-          <div className="copy">
-            <p>&copy; Copyright- Usman Akram</p>
-          </div>
-        </nav>
+    </div>
+    
+    <div class="blur-background" style={{ display: isMenuOpened ? 'flex' : 'none' }}>
+        <nav class="nav-menu">
+            
+            <div class="ico">
+                <span class="horizon"></span>
+                <a href="https://instagram.com/sh.a9i" target="/"><i class="fa fa-instagram"></i></a> 
+                <a href="https://www.facebook.com/FlyynR" target="/"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/usmanakram9" target="/"><i class="fa fa-linkedin"></i></a>
+               
+        </div>
+            <ul class="nav-menu-item">
+                <li><a href="index.html">Home</a></li>
+               
+                <li><a href="#about">About</a></li>
+              
+            </ul>
+            <ul class="nav-menu-item2">
+                <li><a href="#service">Services</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
 
-        <div className="vertical-line"></div>
-      </div>
-</div>
+                <li><a href="#contactus">Contact</a></li>
+            </ul>
+         <div class="copy">
+           <p>&copy; Copyright- Usman Akram</p>
+         </div>
+        </nav>  
+       
+        <div class="vertical-line"></div>
+       
+    </div>
+
   
 </section>
 <section id="banner" class="banner">
